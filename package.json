@@ -1,7 +1,7 @@
 {
 	"name": "entertainment-web-app",
 	"version": "0.1.0",
-	"homepage": "https://davitjabushanuri.github.io.entertainment-web-app",
+	"homepage": "https://davitjabushanuri.github.io/ნპმentertainment-web-app",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
