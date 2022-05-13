@@ -10,23 +10,31 @@ function App() {
 	const [shows, setShows] = useState(Database)
 	const [movies, setMovies] = useState([])
 	const [tvShows, setTvShows] = useState([])
+	const [trending, setTrending] = useState([])
+	const [bookmarks, setBookmarks] = useState([])
 
-	const getMovies = Database => {
+	console.log(shows)
+
+	const sortShows = Database => {
 		const moviesData = Database.filter(show => show.category === 'Movie')
 		const tvShowsData = Database.filter(show => show.category === 'TV Series')
+		const trendingData = Database.filter(show => show.isTrending === true)
+		const bookmarksData = Database.filter(show => show.isBookmarked === true)
 		setMovies(moviesData)
 		setTvShows(tvShowsData)
+		setTrending(trendingData)
+		setBookmarks(bookmarksData)
 	}
 
 	useEffect(() => {
-		getMovies(Database)
-	}, [])
+		sortShows(shows)
+	}, [shows])
 
 	return (
 		<div className='App'>
 			<Navbar />
 			<Trending />
-			{tvShows.map(show => {
+			{bookmarks.map(show => {
 				return <p>{show.title}</p>
 			})}
 		</div>
