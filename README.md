@@ -41,6 +41,29 @@ npm start
 
 ## :book: What I learned
 
+- CSS Variable Naming
+
+  ```
+  // colors
+  $clr-base: #ffffff;
+  $clr-primary: #fc4747;
+  $clr-secondary-dk: #161d2f;
+  $clr-secondary-lt: #5a698f;
+  $clr-background: #10141e;
+
+  // font size
+  $fs-base: 16px;
+  $fs-h1: 32px;
+  $fs-h2: 24px;
+  $fs-h6: 18px;
+  $fs-milli: 15px;
+  $fs-micro: 13px;
+
+  // font family
+  $ff-base: 'Outfit', sans-serif;
+
+  ```
+
 ### :house: Development
 
 - Add animations
