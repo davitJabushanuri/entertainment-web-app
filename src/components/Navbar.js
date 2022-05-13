@@ -6,24 +6,36 @@ import TVseriesIcon from './assets/icon-nav-tv-series.svg'
 import BookmarksIcon from './assets/icon-nav-bookmark.svg'
 import UserIcon from './assets/image-avatar.png'
 
+import { Link } from 'react-router-dom'
+
 const Navbar = () => {
 	return (
 		<nav className='navbar'>
 			<div className='navbar__logo'>
-				<img src={Logo} alt='' />
+				<Link to='/'>
+					<img src={Logo} alt='' />
+				</Link>
 			</div>
 			<ul className='navbar__links'>
 				<li className='navbar__links__link'>
-					<img src={HomeIcon} alt='' />
+					<Link to='/'>
+						<img src={HomeIcon} alt='' />
+					</Link>
 				</li>
 				<li className='navbar__links__link'>
-					<img src={MoviesIcon} alt='' />
+					<Link to='/movies'>
+						<img src={MoviesIcon} alt='' />
+					</Link>
 				</li>
 				<li className='navbar__links__link'>
-					<img src={TVseriesIcon} alt='' />
+					<Link to='/tvseries'>
+						<img src={TVseriesIcon} alt='' />
+					</Link>
 				</li>
 				<li className='navbar__links__link'>
-					<img src={BookmarksIcon} alt='' />
+					<Link to='/bookmarks'>
+						<img src={BookmarksIcon} alt='' />
+					</Link>
 				</li>
 			</ul>
 

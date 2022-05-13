@@ -1,7 +1,12 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 const Movies = () => {
-	return <div>Movies</div>
+	return (
+		<div className='movies'>
+			<Navbar />
+		</div>
+	)
 }
 
 export default Movies

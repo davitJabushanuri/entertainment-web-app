@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
-
 import { showsContext } from './contexts/showsContext'
+import { Routes, Route } from 'react-router-dom'
 
-import Navbar from './components/Navbar'
-import Trending from './components/Trending'
+import Home from './pages/Home'
+import Movies from './pages/Movies'
+import TVSeries from './pages/TVSeries'
+import Bookmarks from './pages/Bookmarks'
+
 import './scss/main.scss'
 
 import Database from './data.json'
@@ -35,8 +38,12 @@ function App() {
 			<showsContext.Provider
 				value={{ shows, movies, tvShows, trending, bookmarks, setBookmarks }}
 			>
-				<Navbar />
-				<Trending />
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='movies' element={<Movies />} />
+					<Route path='tvseries' element={<TVSeries />} />
+					<Route path='bookmarks' element={<Bookmarks />} />
+				</Routes>
 			</showsContext.Provider>
 		</div>
 	)
