@@ -1,0 +1,33 @@
+.navbar {
+	background-color: $clr-background-nav;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+
+	&__logo {
+		width: 25px;
+		height: auto;
+	}
+
+	&__links {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		gap: clamp(1rem, 1rem + 2vw, 38px);
+
+		&__link {
+			width: 16px;
+		}
+	}
+
+	&__user {
+		width: 24px;
+		border: 2px solid $clr-base;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,61 @@
+.card {
+	position: relative;
+	&__header {
+		position: absolute;
+		bottom: clamp(0.2rem, 0.2rem + 1vw, 1.6rem);
+		left: clamp(1rem, 1rem + 2vw, 2rem);
+		font-weight: $fw-medium;
+		font-size: clamp($fs-milli, $fs-milli + 2vw, $fs-h3);
+	}
+
+	&__imgContainer {
+		z-index: -1;
+
+		&__image {
+			inline-size: 100%;
+			aspect-ratio: 16 /9;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	}
+
+	&__bookmark {
+		position: absolute;
+		top: 0.6rem;
+		right: 0.6rem;
+		background-color: $clr-secondary;
+		border-radius: 50%;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0.6;
+		cursor: pointer;
+	}
+
+	&__info {
+		position: absolute;
+		bottom: clamp(2rem, 2rem + 2vw, 4rem);
+		left: clamp(1rem, 1rem + 2vw, 2rem);
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-weight: $fw-light;
+		font-size: clamp($fs-micro, $fs-micro + 2vw, $fs-milli);
+
+		&__dot {
+			width: 3px;
+			height: 3px;
+			border-radius: 50%;
+			background-color: $clr-base;
+		}
+
+		&__category {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+		}
+	}
+}

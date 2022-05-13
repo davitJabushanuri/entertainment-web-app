@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import { showsContext } from './contexts/showsContext'
+
 import Navbar from './components/Navbar'
 import Trending from './components/Trending'
 import './scss/main.scss'
@@ -13,13 +15,11 @@ function App() {
 	const [trending, setTrending] = useState([])
 	const [bookmarks, setBookmarks] = useState([])
 
-	console.log(shows)
-
-	const sortShows = Database => {
-		const moviesData = Database.filter(show => show.category === 'Movie')
-		const tvShowsData = Database.filter(show => show.category === 'TV Series')
-		const trendingData = Database.filter(show => show.isTrending === true)
-		const bookmarksData = Database.filter(show => show.isBookmarked === true)
+	const sortShows = shows => {
+		const moviesData = shows.filter(show => show.category === 'Movie')
+		const tvShowsData = shows.filter(show => show.category === 'TV Series')
+		const trendingData = shows.filter(show => show.isTrending === true)
+		const bookmarksData = shows.filter(show => show.isBookmarked === true)
 		setMovies(moviesData)
 		setTvShows(tvShowsData)
 		setTrending(trendingData)
@@ -32,11 +32,12 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Navbar />
-			<Trending />
-			{bookmarks.map(show => {
-				return <p>{show.title}</p>
-			})}
+			<showsContext.Provider
+				value={{ shows, movies, tvShows, trending, bookmarks, setBookmarks }}
+			>
+				<Navbar />
+				<Trending />
+			</showsContext.Provider>
 		</div>
 	)
 }

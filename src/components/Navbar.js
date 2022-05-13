@@ -1,10 +1,10 @@
 import React from 'react'
-import Logo from '../assets/logo.svg'
-import HomeIcon from '../assets/icon-nav-home.svg'
-import MoviesIcon from '../assets/icon-nav-movies.svg'
-import TVseriesIcon from '../assets/icon-nav-tv-series.svg'
-import BookmarksIcon from '../assets/icon-nav-bookmark.svg'
-import UserIcon from '../assets/image-avatar.png'
+import Logo from './assets/logo.svg'
+import HomeIcon from './assets/icon-nav-home.svg'
+import MoviesIcon from './assets/icon-nav-movies.svg'
+import TVseriesIcon from './assets/icon-nav-tv-series.svg'
+import BookmarksIcon from './assets/icon-nav-bookmark.svg'
+import UserIcon from './assets/image-avatar.png'
 
 const Navbar = () => {
 	return (
