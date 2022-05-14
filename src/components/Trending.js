@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { showsContext } from '../contexts/showsContext'
-import Card from './Card'
+import TrendingCard from './TrendingCard'
 
 const Trending = () => {
 	const { trending } = useContext(showsContext)
@@ -11,7 +11,7 @@ const Trending = () => {
 			<div className='trending__movies'>
 				{trending.map(show => {
 					return (
-						<Card
+						<TrendingCard
 							key={show.title}
 							title={show.title}
 							year={show.year}

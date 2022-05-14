@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Trending from '../components/Trending'
 import Search from '../components/Search'
+import Trending from '../components/Trending'
+import Recommended from '../components/Recommended'
 
 const Home = () => {
 	return (
@@ -9,6 +10,7 @@ const Home = () => {
 			<Navbar />
 			<Search />
 			<Trending />
+			<Recommended />
 		</div>
 	)
 }
