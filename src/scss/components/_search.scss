@@ -1,0 +1,28 @@
+.search {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+		font-weight: $fw-light;
+	}
+
+	&__input {
+		background: transparent;
+		border: none;
+		outline: none;
+		color: $clr-base;
+		font-size: $fs-base;
+		width: clamp(200px, 250px + 4vw, 500px);
+		padding: 0.8rem 0;
+		border-bottom: 1px solid transparent;
+		caret-color: $clr-primary;
+
+		&:focus {
+			border-bottom: 1px solid $clr-secondary;
+		}
+	}
+}
