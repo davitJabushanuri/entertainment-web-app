@@ -29,7 +29,9 @@
 		align-items: center;
 		gap: 0.4rem;
 		font-weight: $fw-light;
-		font-size: clamp($fs-micro, $fs-micro + 2vw, $fs-milli);
+		font-size: clamp(11px, 11px + 2vw, $fs-micro);
+		font-size: 12px;
+		color: rgb(185, 185, 185);
 
 		&__dot {
 			width: 3px;
@@ -48,6 +50,6 @@
 	&__title {
 		margin: 0;
 		font-weight: $fw-medium;
-		font-size: clamp($fs-milli, $fs-milli + 2vw, $fs-h3);
+		font-size: clamp(14px, 14px + 2vw, 1rem);
 	}
 }

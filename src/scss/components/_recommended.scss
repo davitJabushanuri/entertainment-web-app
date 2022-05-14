@@ -1,0 +1,15 @@
+.recommended {
+	padding: 0 1rem;
+
+	&__header {
+		font-size: $fs-h3;
+		font-weight: $fw-light;
+		margin-top: 1rem;
+	}
+
+	&__movies {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.4rem 1rem;
+	}
+}
