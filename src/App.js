@@ -16,17 +16,24 @@ function App() {
 	const [movies, setMovies] = useState([])
 	const [tvShows, setTvShows] = useState([])
 	const [trending, setTrending] = useState([])
-	const [bookmarks, setBookmarks] = useState([])
+	const [bookmarkedMovies, setBookmarkedMovies] = useState([])
+	const [bookmarkedTVSeries, setBookmarkedTVSeries] = useState([])
 
 	const sortShows = shows => {
 		const moviesData = shows.filter(show => show.category === 'Movie')
 		const tvShowsData = shows.filter(show => show.category === 'TV Series')
 		const trendingData = shows.filter(show => show.isTrending === true)
-		const bookmarksData = shows.filter(show => show.isBookmarked === true)
+		const bookmarkedMovies = shows.filter(
+			show => show.isBookmarked === true && show.category === 'Movie'
+		)
+		const bookmarkedTVSeries = shows.filter(
+			show => show.isBookmarked === true && show.category === 'TV Series'
+		)
 		setMovies(moviesData)
 		setTvShows(tvShowsData)
 		setTrending(trendingData)
-		setBookmarks(bookmarksData)
+		setBookmarkedMovies(bookmarkedMovies)
+		setBookmarkedTVSeries(bookmarkedTVSeries)
 	}
 
 	useEffect(() => {
@@ -36,7 +43,16 @@ function App() {
 	return (
 		<div className='App'>
 			<showsContext.Provider
-				value={{ shows, movies, tvShows, trending, bookmarks, setBookmarks }}
+				value={{
+					shows,
+					movies,
+					tvShows,
+					trending,
+					bookmarkedMovies,
+					setBookmarkedMovies,
+					bookmarkedTVSeries,
+					setBookmarkedTVSeries,
+				}}
 			>
 				<Routes>
 					<Route path='/' element={<Home />} />
