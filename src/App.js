@@ -36,6 +36,32 @@ function App() {
 		setBookmarkedTVSeries(bookmarkedTVSeries)
 	}
 
+	const handleBookmarks = show => {
+		if (show.isBookmarked) {
+			const title = show.title
+			if (show.category === 'Movie') {
+				setBookmarkedMovies(arr => arr.filter(movie => movie.title !== title))
+
+				show.isBookmarked = true
+			}
+			if (show.category === 'TV Series') {
+				setBookmarkedTVSeries(arr =>
+					arr.filter(tvseries => tvseries.title !== title)
+				)
+				show.isBookmarked = true
+			}
+			return
+		}
+		if (show.category === 'Movie') {
+			setBookmarkedMovies(bookmarks => [...bookmarks, show])
+			show.isBookmarked = true
+		}
+		if (show.category === 'TV Series') {
+			setBookmarkedTVSeries(bookmarks => [...bookmarks, show])
+			show.isBookmarked = true
+		}
+	}
+
 	useEffect(() => {
 		sortShows(shows)
 	}, [shows])
@@ -49,9 +75,10 @@ function App() {
 					tvShows,
 					trending,
 					bookmarkedMovies,
-					setBookmarkedMovies,
 					bookmarkedTVSeries,
+					setBookmarkedMovies,
 					setBookmarkedTVSeries,
+					handleBookmarks,
 				}}
 			>
 				<Routes>

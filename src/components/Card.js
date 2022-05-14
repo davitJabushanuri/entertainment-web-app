@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import MovieIcon from './assets/icon-category-movie.svg'
 import TvIcon from './assets/icon-category-tv.svg'
 import bookmarkEmpty from './assets/icon-bookmark-empty.svg'
 import bookmarkFull from './assets/icon-bookmark-full.svg'
 
-const Card = ({ title, year, rating, category, isBookmarked, imgSrc }) => {
+import { showsContext } from '../contexts/showsContext'
+
+const Card = ({
+	title,
+	year,
+	rating,
+	category,
+	isBookmarked,
+	imgSrc,
+	show,
+}) => {
+	const { handleBookmarks } = useContext(showsContext)
+
 	return (
 		<div className='card'>
 			<div className='card__imgContainer'>
@@ -15,7 +27,7 @@ const Card = ({ title, year, rating, category, isBookmarked, imgSrc }) => {
 				/>
 			</div>
 
-			<div className='card__bookmark'>
+			<div onClick={() => handleBookmarks(show)} className='card__bookmark'>
 				<img
 					className='card__bookmark__icon'
 					src={isBookmarked ? bookmarkFull : bookmarkEmpty}
