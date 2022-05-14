@@ -55,7 +55,7 @@ function App() {
 				}}
 			>
 				<Routes>
-					<Route path='/' element={<Home />} />
+					<Route path='' element={<Home />} />
 					<Route path='/movies' element={<Movies />} />
 					<Route path='/tvseries' element={<TVSeries />} />
 					<Route path='/bookmarks' element={<Bookmarks />} />
