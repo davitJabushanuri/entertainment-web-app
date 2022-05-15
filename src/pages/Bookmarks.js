@@ -11,8 +11,12 @@ const Bookmarks = () => {
 		<div className='bookmarks'>
 			<Navbar />
 			<Search />
-			<Recommended shows={bookmarkedMovies} title='Bookmarked Movies' />
-			<Recommended shows={bookmarkedTVSeries} title='Bookmarked TV Series' />
+			{bookmarkedMovies.length > 0 && (
+				<Recommended shows={bookmarkedMovies} title='Bookmarked Movies' />
+			)}
+			{bookmarkedTVSeries.length > 0 && (
+				<Recommended shows={bookmarkedTVSeries} title='Bookmarked TV Series' />
+			)}
 		</div>
 	)
 }
