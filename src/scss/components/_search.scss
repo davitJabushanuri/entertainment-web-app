@@ -16,7 +16,7 @@
 		outline: none;
 		color: $clr-base;
 		font-size: $fs-base;
-		width: clamp(200px, 250px + 4vw, 500px);
+		width: calc(100% - 24px - 1rem);
 		padding: 0.8rem 0;
 		border-bottom: 1px solid transparent;
 		caret-color: $clr-primary;

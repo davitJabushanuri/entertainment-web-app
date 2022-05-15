@@ -11,7 +11,7 @@ const TVSeries = () => {
 		<div className='tvseries'>
 			<Navbar />
 			<Search />
-			<Recommended shows={tvShows} title='TV Series' />
+			{tvShows.length > 0 && <Recommended shows={tvShows} title='TV Series' />}
 		</div>
 	)
 }

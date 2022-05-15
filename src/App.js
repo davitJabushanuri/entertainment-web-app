@@ -18,6 +18,7 @@ function App() {
 	const [trending, setTrending] = useState([])
 	const [bookmarkedMovies, setBookmarkedMovies] = useState([])
 	const [bookmarkedTVSeries, setBookmarkedTVSeries] = useState([])
+	const [searchValue, setSearchValue] = useState('')
 
 	const sortShows = shows => {
 		const moviesData = shows.filter(show => show.category === 'Movie')
@@ -62,6 +63,15 @@ function App() {
 		}
 	}
 
+	const handleChange = e => {
+		setSearchValue(e.target.value)
+		setShows(
+			Database.filter(show =>
+				show.title.toLowerCase().includes(searchValue.toLowerCase())
+			)
+		)
+	}
+
 	useEffect(() => {
 		sortShows(shows)
 	}, [shows])
@@ -79,6 +89,8 @@ function App() {
 					setBookmarkedMovies,
 					setBookmarkedTVSeries,
 					handleBookmarks,
+					handleChange,
+					searchValue,
 				}}
 			>
 				<Routes>
