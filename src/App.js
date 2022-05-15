@@ -63,14 +63,18 @@ function App() {
 		}
 	}
 
-	const handleChange = e => {
-		setSearchValue(e.target.value)
+	const handleChange = () => {
 		setShows(
 			Database.filter(show =>
 				show.title.toLowerCase().includes(searchValue.toLowerCase())
 			)
 		)
 	}
+
+	useEffect(() => {
+		handleChange()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [searchValue])
 
 	useEffect(() => {
 		sortShows(shows)
@@ -86,11 +90,12 @@ function App() {
 					trending,
 					bookmarkedMovies,
 					bookmarkedTVSeries,
+					searchValue,
 					setBookmarkedMovies,
 					setBookmarkedTVSeries,
 					handleBookmarks,
 					handleChange,
-					searchValue,
+					setSearchValue,
 				}}
 			>
 				<Routes>

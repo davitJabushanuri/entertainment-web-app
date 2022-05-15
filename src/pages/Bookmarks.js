@@ -10,7 +10,7 @@ const Bookmarks = () => {
 	return (
 		<div className='bookmarks'>
 			<Navbar />
-			<Search />
+			<Search placeholder='Search for bookmarked shows' />
 			{bookmarkedMovies.length > 0 && (
 				<Recommended shows={bookmarkedMovies} title='Bookmarked Movies' />
 			)}

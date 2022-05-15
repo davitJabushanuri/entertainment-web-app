@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Logo from './assets/logo.svg'
 import HomeIcon from './assets/icon-nav-home.svg'
 import MoviesIcon from './assets/icon-nav-movies.svg'
@@ -8,7 +8,10 @@ import UserIcon from './assets/image-avatar.png'
 
 import { Link } from 'react-router-dom'
 
+import { showsContext } from '../contexts/showsContext'
+
 const Navbar = () => {
+	const { setSearchValue } = useContext(showsContext)
 	return (
 		<nav className='navbar'>
 			<div className='navbar__logo'>
@@ -18,22 +21,22 @@ const Navbar = () => {
 			</div>
 			<ul className='navbar__links'>
 				<li className='navbar__links__link'>
-					<Link to='/'>
+					<Link onClick={() => setSearchValue('')} to='/'>
 						<img src={HomeIcon} alt='' />
 					</Link>
 				</li>
 				<li className='navbar__links__link'>
-					<Link to='/movies'>
+					<Link onClick={() => setSearchValue('')} to='/movies'>
 						<img src={MoviesIcon} alt='' />
 					</Link>
 				</li>
 				<li className='navbar__links__link'>
-					<Link to='/tvseries'>
+					<Link onClick={() => setSearchValue('')} to='/tvseries'>
 						<img src={TVseriesIcon} alt='' />
 					</Link>
 				</li>
 				<li className='navbar__links__link'>
-					<Link to='/bookmarks'>
+					<Link onClick={() => setSearchValue('')} to='/bookmarks'>
 						<img src={BookmarksIcon} alt='' />
 					</Link>
 				</li>

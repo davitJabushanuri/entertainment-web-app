@@ -10,7 +10,7 @@ const Home = () => {
 	return (
 		<div className='home'>
 			<Navbar />
-			<Search />
+			<Search placeholder='Search for movies or TV series' />
 			<Trending />
 			<Recommended shows={shows} title='Recommended For You' />
 		</div>

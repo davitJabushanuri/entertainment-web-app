@@ -10,7 +10,7 @@ const TVSeries = () => {
 	return (
 		<div className='tvseries'>
 			<Navbar />
-			<Search />
+			<Search placeholder='Search for TV series' />
 			{tvShows.length > 0 && <Recommended shows={tvShows} title='TV Series' />}
 		</div>
 	)

@@ -1,3 +1,9 @@
+html {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 body {
 	background-color: $clr-background;
 	color: $clr-base;
