@@ -42,13 +42,13 @@ function App() {
 			if (show.category === 'Movie') {
 				setBookmarkedMovies(arr => arr.filter(movie => movie.title !== title))
 
-				show.isBookmarked = true
+				show.isBookmarked = false
 			}
 			if (show.category === 'TV Series') {
 				setBookmarkedTVSeries(arr =>
 					arr.filter(tvseries => tvseries.title !== title)
 				)
-				show.isBookmarked = true
+				show.isBookmarked = false
 			}
 			return
 		}
