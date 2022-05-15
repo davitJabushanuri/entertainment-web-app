@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import MovieIcon from './assets/icon-category-movie.svg'
 import TvIcon from './assets/icon-category-tv.svg'
 import bookmarkEmpty from './assets/icon-bookmark-empty.svg'
 import bookmarkFull from './assets/icon-bookmark-full.svg'
+
+import { showsContext } from '../contexts/showsContext'
 
 const TrendingCard = ({
 	title,
@@ -11,7 +13,10 @@ const TrendingCard = ({
 	category,
 	isBookmarked,
 	imgSrc,
+	show,
 }) => {
+	const { handleBookmarks } = useContext(showsContext)
+
 	return (
 		<div
 			// style={{
@@ -27,7 +32,10 @@ const TrendingCard = ({
 				/>
 			</div>
 
-			<div className='trendingCard__bookmark'>
+			<div
+				onClick={() => handleBookmarks(show)}
+				className='trendingCard__bookmark'
+			>
 				<img src={isBookmarked ? bookmarkFull : bookmarkEmpty} alt='' />
 			</div>
 			<div className='trendingCard__info'>

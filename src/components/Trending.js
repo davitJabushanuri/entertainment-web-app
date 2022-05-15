@@ -19,6 +19,7 @@ const Trending = () => {
 							rating={show.rating}
 							isBookmarked={show.isBookmarked}
 							imgSrc={show.thumbnail.trending.small}
+							show={show}
 						/>
 					)
 				})}

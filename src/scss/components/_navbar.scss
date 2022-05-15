@@ -11,9 +11,11 @@
 	}
 
 	&__links {
+		padding: 0;
 		list-style: none;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: clamp(1rem, 1rem + 2vw, 38px);
 
 		&__link {

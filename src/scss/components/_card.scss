@@ -11,8 +11,8 @@
 
 	&__bookmark {
 		position: absolute;
-		top: 0.6rem;
-		right: 0.6rem;
+		top: 8%;
+		right: 8%;
 		background-color: $clr-secondary;
 		border-radius: 50%;
 		width: 32px;
@@ -20,9 +20,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		opacity: 0.4;
+		opacity: 0.8;
 		cursor: pointer;
-		background-color: black;
+		background-color: rgb(70, 70, 70);
 	}
 
 	&__info {
