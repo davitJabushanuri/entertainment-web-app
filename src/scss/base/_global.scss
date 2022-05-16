@@ -8,3 +8,8 @@ body {
 .App {
 	max-width: 1920px;
 }
+
+%header {
+	font-size: clamp($fs-h3, $fs-h3 + 1vw, $fs-h1);
+	font-weight: $fw-light;
+}

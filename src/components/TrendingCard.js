@@ -39,16 +39,18 @@ const TrendingCard = ({
 				<img src={isBookmarked ? bookmarkFull : bookmarkEmpty} alt='' />
 			</div>
 			<div className='trendingCard__info'>
-				<p>{year}</p>
-				<div className='trendingCard__info__dot'></div>
-				<div className='trendingCard__info__category'>
-					<img src={category === 'Movie' ? MovieIcon : TvIcon} alt='' />
-					<p>{category}</p>
+				<div className='trendingCard__info__flex'>
+					<p>{year}</p>
+					<div className='trendingCard__info__dot'></div>
+					<div className='trendingCard__info__category'>
+						<img src={category === 'Movie' ? MovieIcon : TvIcon} alt='' />
+						<p>{category}</p>
+					</div>
+					<div className='trendingCard__info__dot'></div>
+					<p className='trendingCard__rating'>{rating}</p>
 				</div>
-				<div className='trendingCard__info__dot'></div>
-				<p className='trendingCard__rating'>{rating}</p>
+				<h3 className='trendingCard__info__header'>{title}</h3>
 			</div>
-			<h3 className='trendingCard__header'>{title}</h3>
 		</div>
 	)
 }

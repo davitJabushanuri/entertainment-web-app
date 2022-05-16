@@ -1,49 +1,61 @@
 .trendingCard {
 	position: relative;
-	&__header {
-		position: absolute;
-		bottom: clamp(0.2rem, 0.2rem + 1vw, 1.6rem);
-		left: clamp(1rem, 1rem + 2vw, 2rem);
-		font-weight: $fw-medium;
-		font-size: clamp($fs-milli, $fs-milli + 2vw, $fs-h3);
-	}
 
 	&__imgContainer {
 		z-index: -1;
 
 		&__image {
 			inline-size: 100%;
-			aspect-ratio: 16 /9;
-			object-fit: cover;
 			border-radius: 8px;
 		}
 	}
 
 	&__bookmark {
 		position: absolute;
-		top: 10%;
+		top: 8%;
 		right: 6%;
 		background-color: $clr-secondary;
 		border-radius: 50%;
-		width: 32px;
-		height: 32px;
+		width: clamp(32px, 32px + 1vw, 40px);
+		height: clamp(32px, 32px + 1vw, 40px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		opacity: 0.8;
 		cursor: pointer;
 		background-color: rgb(70, 70, 70);
+
+		img {
+			width: 40%;
+			height: 50%;
+		}
 	}
 
 	&__info {
 		position: absolute;
-		bottom: clamp(2rem, 2rem + 2vw, 4rem);
-		left: clamp(1rem, 1rem + 2vw, 2rem);
+		bottom: 10%;
+		left: 5%;
 		display: flex;
-		align-items: center;
-		gap: 0.4rem;
-		font-weight: $fw-light;
-		font-size: clamp($fs-micro, $fs-micro + 2vw, $fs-milli);
+		flex-direction: column;
+		gap: 8px;
+
+		& * {
+			margin: 0;
+		}
+
+		&__flex {
+			display: flex;
+			align-items: center;
+			gap: 0.4rem;
+			font-weight: $fw-light;
+			font-size: clamp($fs-micro, $fs-micro + 2vw, $fs-milli);
+			color: rgb(223, 223, 223);
+		}
+
+		&__header {
+			font-weight: $fw-light;
+			font-size: clamp($fs-milli, $fs-milli + 1vw, $fs-h2);
+		}
 
 		&__dot {
 			width: 3px;

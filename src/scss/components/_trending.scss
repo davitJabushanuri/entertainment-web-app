@@ -1,10 +1,10 @@
 .trending {
 	padding: 0 0 1rem 1rem;
+	margin-bottom: 1rem;
 
 	&__header {
-		font-size: $fs-h3;
-		font-weight: $fw-light;
-		margin-top: 0.2rem;
+		@extend %header;
+		margin: 0 0 1rem 0;
 	}
 
 	&__movies {

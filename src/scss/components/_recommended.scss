@@ -3,17 +3,18 @@
 	margin-bottom: 2rem;
 
 	&__header {
-		font-size: $fs-h3;
-		font-weight: $fw-light;
+		@extend %header;
+		margin: 0 0 1rem 0;
 	}
 
 	&__movies {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 1.4rem 1rem;
+		gap: 1.6rem 1rem;
 
 		@media (min-width: 768px) {
 			grid-template-columns: repeat(3, 1fr);
+			gap: 1.8rem 1.4rem;
 		}
 
 		@media (min-width: 1200px) {
