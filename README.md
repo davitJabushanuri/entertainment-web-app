@@ -64,6 +64,26 @@ npm start
 
   ```
 
+- Fixed position but relative to container
+
+  ```
+    # Ensure absolute positioned child elements are relative to this
+    .wrapper {
+    position: relative;
+    }
+
+    # Absolute positioned wrapper for the element you want to fix position
+    .fixed-wrapper {
+    position: absolute;
+    }
+
+    # The element you want to fix the position of
+    .fixed {
+    position: fixed;
+    #Do not set top / left
+    }
+  ```
+
 ### :house: Development
 
 - Add animations
@@ -99,3 +119,7 @@ Your contributions are always welcome and appreciated. Following are the things 
 ### 📝 License
 
 This project is [MIT](https://github.com/davitJabushanuri/readme/blob/master/LICENSE) licensed.
+
+```
+
+```
