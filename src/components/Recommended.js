@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Card from './Card'
 
 const Recommended = ({ shows, title }) => {
@@ -7,10 +6,10 @@ const Recommended = ({ shows, title }) => {
 		<section className='recommended'>
 			<h2 className='recommended__header'>{title}</h2>
 			<div className='recommended__movies'>
-				{shows.map(show => {
+				{shows.map((show, key) => {
 					return (
 						<Card
-							key={show.title}
+							key={key}
 							title={show.title}
 							year={show.year}
 							category={show.category}

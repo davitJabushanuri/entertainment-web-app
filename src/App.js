@@ -62,19 +62,6 @@ function App() {
 		}
 	}
 
-	const handleChange = () => {
-		setShows(
-			Database.filter(show =>
-				show.title.toLowerCase().includes(searchValue.toLowerCase())
-			)
-		)
-	}
-
-	useEffect(() => {
-		handleChange()
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [searchValue])
-
 	useEffect(() => {
 		sortShows(shows)
 	}, [shows])
@@ -93,7 +80,6 @@ function App() {
 					setBookmarkedMovies,
 					setBookmarkedTVSeries,
 					handleBookmarks,
-					handleChange,
 					setSearchValue,
 				}}
 			>

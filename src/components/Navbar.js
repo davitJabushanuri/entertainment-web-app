@@ -27,23 +27,23 @@ const Navbar = () => {
 				</li>
 				<li className='navbar__links__link'>
 					<Link onClick={() => setSearchValue('')} to='/movies'>
-						<img src={MoviesIcon} alt='' />
+						<img className='listIcon' src={MoviesIcon} alt='' />
 					</Link>
 				</li>
 				<li className='navbar__links__link'>
 					<Link onClick={() => setSearchValue('')} to='/tvseries'>
-						<img src={TVseriesIcon} alt='' />
+						<img className='listIcon' src={TVseriesIcon} alt='' />
 					</Link>
 				</li>
 				<li className='navbar__links__link'>
 					<Link onClick={() => setSearchValue('')} to='/bookmarks'>
-						<img src={BookmarksIcon} alt='' />
+						<img className='listIcon' src={BookmarksIcon} alt='' />
 					</Link>
 				</li>
 			</ul>
 
 			<div className='navbar__user'>
-				<img src={UserIcon} alt='' />
+				<img className='listIcon' src={UserIcon} alt='' />
 			</div>
 		</nav>
 	)
