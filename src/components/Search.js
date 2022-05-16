@@ -12,7 +12,6 @@ const Search = ({ placeholder }) => {
 			<input
 				value={searchValue}
 				onChange={e => setSearchValue(e.target.value)}
-				on
 				type='text'
 				className='search__input'
 				placeholder={placeholder}

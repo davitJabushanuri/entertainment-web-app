@@ -10,8 +10,8 @@
 	&__movies {
 		display: grid;
 		grid-auto-flow: column;
-		grid-auto-columns: clamp(240px, 60%, 470px);
-		gap: 1rem;
+		grid-auto-columns: clamp(240px, 65%, 470px);
+		gap: clamp(0.6rem, 0.6rem + 4vw, 2.4rem);
 
 		overflow-x: auto;
 		overscroll-behavior-inline: contain;

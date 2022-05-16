@@ -8,7 +8,6 @@ import TVSeries from './pages/TVSeries'
 import Bookmarks from './pages/Bookmarks'
 
 import './scss/main.scss'
-
 import Database from './data.json'
 
 function App() {

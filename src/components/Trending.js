@@ -18,7 +18,11 @@ const Trending = () => {
 							category={show.category}
 							rating={show.rating}
 							isBookmarked={show.isBookmarked}
-							imgSrc={show.thumbnail.trending.small}
+							imgSrc={
+								window.innerWidth < 768
+									? show.thumbnail.trending.small
+									: show.thumbnail.trending.small
+							}
 							show={show}
 						/>
 					)

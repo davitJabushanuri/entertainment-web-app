@@ -1,4 +1,10 @@
 body {
 	background-color: $clr-background;
 	color: $clr-base;
+	display: flex;
+	justify-content: center;
+}
+
+.App {
+	max-width: 1920px;
 }

@@ -16,7 +16,11 @@ const Recommended = ({ shows, title }) => {
 							category={show.category}
 							rating={show.rating}
 							isBookmarked={show.isBookmarked}
-							imgSrc={show.thumbnail.regular.small}
+							imgSrc={
+								window.innerWidth < 768
+									? show.thumbnail.regular.small
+									: show.thumbnail.regular.large
+							}
 							show={show}
 						/>
 					)
