@@ -1,13 +1,35 @@
+.navbarContainer {
+	position: relative;
+	@media (min-width: 1440px) {
+		position: absolute;
+		left: 1rem;
+	}
+}
+
 .navbar {
 	background-color: $clr-background-nav;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 1rem;
+	padding: 0 2rem;
+
+	@media (min-width: 1440px) {
+		position: fixed;
+		height: 94vh;
+		z-index: 2;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 1rem;
+		border-radius: 14px;
+	}
 
 	&__logo {
 		width: 25px;
 		height: auto;
+
+		@media (min-width: 1440px) {
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__links {
@@ -17,6 +39,10 @@
 		align-items: center;
 		justify-content: center;
 		gap: clamp(1rem, 1rem + 2vw, 38px);
+
+		@media (min-width: 1440px) {
+			flex-direction: column;
+		}
 
 		&__link {
 			width: 16px;
@@ -31,5 +57,9 @@
 		justify-content: center;
 		align-items: center;
 		cursor: pointer;
+
+		@media (min-width: 1440px) {
+			margin-top: auto;
+		}
 	}
 }

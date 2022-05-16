@@ -8,9 +8,21 @@ body {
 .App {
 	width: 100vw;
 	max-width: 1440px;
+	// position: relative;
 }
 
 %header {
 	font-size: clamp($fs-h3, $fs-h3 + 1vw, $fs-h1);
 	font-weight: $fw-light;
+}
+
+.home,
+.movies,
+.tvseries,
+.bookmarks {
+	position: relative;
+
+	@media (min-width: 1440px) {
+		padding-left: 5rem;
+	}
 }

@@ -13,39 +13,41 @@ import { showsContext } from '../contexts/showsContext'
 const Navbar = () => {
 	const { setSearchValue } = useContext(showsContext)
 	return (
-		<nav className='navbar'>
-			<div className='navbar__logo'>
-				<Link to='/'>
-					<img src={Logo} alt='' />
-				</Link>
-			</div>
-			<ul className='navbar__links'>
-				<li className='navbar__links__link'>
-					<Link onClick={() => setSearchValue('')} to='/'>
-						<img src={HomeIcon} alt='' />
+		<section className='navbarContainer'>
+			<nav className='navbar'>
+				<div className='navbar__logo'>
+					<Link to='/'>
+						<img src={Logo} alt='' />
 					</Link>
-				</li>
-				<li className='navbar__links__link'>
-					<Link onClick={() => setSearchValue('')} to='/movies'>
-						<img className='listIcon' src={MoviesIcon} alt='' />
-					</Link>
-				</li>
-				<li className='navbar__links__link'>
-					<Link onClick={() => setSearchValue('')} to='/tvseries'>
-						<img className='listIcon' src={TVseriesIcon} alt='' />
-					</Link>
-				</li>
-				<li className='navbar__links__link'>
-					<Link onClick={() => setSearchValue('')} to='/bookmarks'>
-						<img className='listIcon' src={BookmarksIcon} alt='' />
-					</Link>
-				</li>
-			</ul>
+				</div>
+				<ul className='navbar__links'>
+					<li className='navbar__links__link'>
+						<Link onClick={() => setSearchValue('')} to='/'>
+							<img src={HomeIcon} alt='' />
+						</Link>
+					</li>
+					<li className='navbar__links__link'>
+						<Link onClick={() => setSearchValue('')} to='/movies'>
+							<img className='listIcon' src={MoviesIcon} alt='' />
+						</Link>
+					</li>
+					<li className='navbar__links__link'>
+						<Link onClick={() => setSearchValue('')} to='/tvseries'>
+							<img className='listIcon' src={TVseriesIcon} alt='' />
+						</Link>
+					</li>
+					<li className='navbar__links__link'>
+						<Link onClick={() => setSearchValue('')} to='/bookmarks'>
+							<img className='listIcon' src={BookmarksIcon} alt='' />
+						</Link>
+					</li>
+				</ul>
 
-			<div className='navbar__user'>
-				<img className='listIcon' src={UserIcon} alt='' />
-			</div>
-		</nav>
+				<div className='navbar__user'>
+					<img className='listIcon' src={UserIcon} alt='' />
+				</div>
+			</nav>
+		</section>
 	)
 }
 
