@@ -21,8 +21,9 @@ body {
 .tvseries,
 .bookmarks {
 	position: relative;
+	padding: 0 1rem;
 
-	@media (min-width: 1440px) {
-		padding-left: 5rem;
+	@media (min-width: 1024px) {
+		padding-left: 6rem;
 	}
 }
