@@ -23,7 +23,7 @@ const Navbar = () => {
 				<ul className='navbar__links'>
 					<li className='navbar__links__link'>
 						<Link onClick={() => setSearchValue('')} to='/'>
-							<img src={HomeIcon} alt='' />
+							<img className='listIcon' src={HomeIcon} alt='' />
 						</Link>
 					</li>
 					<li className='navbar__links__link'>
@@ -44,7 +44,7 @@ const Navbar = () => {
 				</ul>
 
 				<div className='navbar__user'>
-					<img className='listIcon' src={UserIcon} alt='' />
+					<img src={UserIcon} alt='' />
 				</div>
 			</nav>
 		</section>

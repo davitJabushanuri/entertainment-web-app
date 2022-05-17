@@ -28,7 +28,7 @@
 		height: auto;
 
 		@media (min-width: 1024px) {
-			margin-bottom: 2rem;
+			margin: 1rem 0.8rem 2rem;
 		}
 	}
 
@@ -60,6 +60,18 @@
 
 		@media (min-width: 1024px) {
 			margin-top: auto;
+			margin-bottom: 1rem;
 		}
 	}
+}
+
+.listIcon {
+	fill: $clr-primary;
+	stroke: rgb(24, 201, 201);
+	fill: aquamarine;
+	opacity: 1;
+}
+
+svg {
+	fill: aqua;
 }

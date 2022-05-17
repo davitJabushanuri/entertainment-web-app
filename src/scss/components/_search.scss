@@ -5,6 +5,10 @@
 	align-items: center;
 	gap: 1rem;
 
+	@media (min-width: 1024px) {
+		padding-top: 1rem;
+	}
+
 	&__icon {
 		width: 24px;
 		height: 24px;

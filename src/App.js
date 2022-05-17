@@ -68,6 +68,7 @@ function App() {
 
 	return (
 		<div className='App'>
+			<div className='placeholder'></div>
 			<showsContext.Provider
 				value={{
 					shows,

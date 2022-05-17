@@ -1,3 +1,21 @@
+::-webkit-scrollbar {
+	width: 1.4rem;
+	height: 1.2rem;
+}
+::-webkit-scrollbar-thumb {
+	background: $clr-background;
+	border-radius: 100vw;
+	border: 0.3rem solid $clr-background-nav;
+
+	&:hover {
+		background: $clr-secondary;
+	}
+}
+::-webkit-scrollbar-track {
+	background: $clr-background-nav;
+	border-radius: 100vw;
+}
+
 body {
 	background-color: $clr-background;
 	color: $clr-base;
@@ -6,9 +24,8 @@ body {
 }
 
 .App {
-	width: 100vw;
+	min-height: 100vw;
 	max-width: 1440px;
-	// position: relative;
 }
 
 %header {
@@ -21,9 +38,8 @@ body {
 .tvseries,
 .bookmarks {
 	position: relative;
-	padding: 0 1rem;
 
 	@media (min-width: 1024px) {
-		padding-left: 6rem;
+		padding-left: 8rem;
 	}
 }
