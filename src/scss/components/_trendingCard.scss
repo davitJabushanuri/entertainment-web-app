@@ -27,6 +27,15 @@
 		cursor: pointer;
 		background-color: rgb(70, 70, 70);
 
+		&:hover {
+			background-color: $clr-base;
+		}
+
+		&:hover > img {
+			filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(308deg)
+				brightness(0%) contrast(101%);
+		}
+
 		img {
 			width: 40%;
 			height: 50%;

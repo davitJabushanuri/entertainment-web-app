@@ -71,4 +71,8 @@
 	stroke: rgb(24, 201, 201);
 	fill: aquamarine;
 	opacity: 1;
+
+	> svg {
+		fill: orange;
+	}
 }
