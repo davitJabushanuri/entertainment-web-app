@@ -29,5 +29,9 @@
 		&:focus {
 			border-bottom: 1px solid $clr-secondary;
 		}
+
+		@media (min-width: 768px) {
+			font-size: $fs-h3;
+		}
 	}
 }

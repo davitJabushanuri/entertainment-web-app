@@ -28,14 +28,26 @@
 			}
 
 			div {
-				height: 44px;
-				width: 100px;
+				padding: 0.4rem 0.6rem;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				gap: 0.8rem;
 				background-color: rgba(255, 255, 255, 0.2);
 				border-radius: 100px;
+
+				p {
+					margin: 0;
+				}
+
+				@media (max-width: 768px) {
+					font-size: 10px;
+					gap: 0.4rem;
+
+					img {
+						width: 18px;
+					}
+				}
 			}
 		}
 	}
@@ -58,6 +70,11 @@
 
 		&:hover {
 			background-color: $clr-base;
+		}
+
+		@media (max-width: 768px) {
+			width: clamp(20px, 20px + 1vw, 25px);
+			height: clamp(20px, 20px + 1vw, 25px);
 		}
 
 		img {
