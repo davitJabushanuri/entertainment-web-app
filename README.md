@@ -1,18 +1,24 @@
-# Advice generator
+# Entertainment web app
 
-This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db).
+This is a solution to the [Entertainment web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X).
 
 ## :beginner: Overview
 
-this app generates new advice on every button click.
-
-[View demo](https://davitjabushanuri.github.io/advice-generator/)
+[View demo](https://davitjabushanuri.github.io/entertainment-web-app/)
 
 ## :camera:
 
 ![](./templates/template.png)
 
 ## :zap: Usage
+
+Users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate between Home, Movies, TV Series, and Bookmarked Shows pages
+- Add/Remove bookmarks from all movies and TV series
+- Search for relevant shows on all pages
 
 ### :notebook: Pre-Requisites
 
@@ -27,8 +33,8 @@ To get a local copy up and running follow these simple example steps.
 After you've made sure to have all the tools installed, you should be able to just run a few commands to get set up
 
 ```
-git clone git@github.com:davitJabushanuri/advice-generator.git
-cd advice-generator
+git clone https://github.com/davitJabushanuri/entertainment-web-app.git
+cd entertainment-web-app
 npm install
 npm start
 ```
@@ -36,7 +42,9 @@ npm start
 ### :hammer: Built With
 
 - [React](reactjs.org)
-- [Sass](https://sass-lang.com/)
+- [React Router](https://reactrouter.com/)
+- [SCSS](https://sass-lang.com/)
+- [Css Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ## :book: What I learned
@@ -47,16 +55,13 @@ npm start
   // colors
   $clr-base: #ffffff;
   $clr-primary: #fc4747;
-  $clr-secondary-dk: #161d2f;
-  $clr-secondary-lt: #5a698f;
+  $clr-secondary: #161d2f;
   $clr-background: #10141e;
 
   // font size
   $fs-base: 16px;
   $fs-h1: 32px;
   $fs-h2: 24px;
-  $fs-h6: 18px;
-  $fs-milli: 15px;
   $fs-micro: 13px;
 
   // font family
@@ -84,20 +89,79 @@ npm start
     }
   ```
 
+- How to reference a local image in React
+
+  ```
+  #image
+  <img src={require('' + imgSrc)} alt='' />
+
+  # Background image
+  style={{
+  backgroundImage: `url(${require('' + imgSrc)})`,
+  }}
+  ```
+
+- How to change the color of an svg element
+
+  ```
+  # use filter instead of color
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+  ```
+
+To filter to a specific color, use the following [Codepen](https://codepen.io/sosuke/pen/Pjoqqp) to convert a hex color code to a CSS filter:
+
+- How to style active Link in react-router
+
+  - Use NavLink instead Link.
+  - pass link’s active state as a parameter
+
+  ```
+  <NavLink
+  style={({ isActive }) =>
+  isActive
+  ? {
+  color: 'green'}
+  : {color: 'white'}
+  to='/'>
+  ```
+
+- How to style scrollbar
+
+  ```
+  ::-webkit-scrollbar {
+  width: 2vw;
+  height: 4vh;
+  }
+  ::-webkit-scrollbar-thumb {
+  background: $clr-background;
+  border-radius: 100vw;
+  border: 0.3rem solid $clr-background-nav;
+
+  &:hover {
+  	background: $clr-secondary;
+  }
+  }
+  ::-webkit-scrollbar-track {
+  background: $clr-background-nav;
+  border-radius: 100vw;
+  }
+  ```
+
 ### :house: Development
 
 - Add animations
 - Add light theme
+- Add authentication
 
 ### 🤝 Contribution
 
 Your contributions are always welcome and appreciated. Following are the things you can do to contribute to this project.
 
 - **Report a bug**
-  If you think you have encountered a bug, feel free to report it [here](https://github.com/davitJabushanuri/advice-generator/issues).
+  If you think you have encountered a bug, feel free to report it [here](https://github.com/davitJabushanuri/entertainment-web-app/issues).
   <br/>
 - **Request a feature**
-  If you have a suggestion that would make this better, You can request for a feature [here](https://github.com/davitJabushanuri/advice-generator/issues) with the tag "enhancement".
+  If you have a suggestion that would make this better, You can request for a feature [here](https://github.com/davitJabushanuri/entertainment-web-app/issues) with the tag "enhancement".
   <br/>
 
 - **Create a pull request**
@@ -115,11 +179,9 @@ Your contributions are always welcome and appreciated. Following are the things 
 
 - [Frontend Masters](https://www.frontendmentor.io/home)
 - [React](reactjs.org)
+- [React Router](https://reactrouter.com/)
+- [Kevin Powell](https://www.youtube.com/kepowob)
 
 ### 📝 License
 
 This project is [MIT](https://github.com/davitJabushanuri/readme/blob/master/LICENSE) licensed.
-
-```
-
-```

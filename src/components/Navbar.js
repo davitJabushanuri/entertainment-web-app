@@ -26,14 +26,7 @@ const Navbar = () => {
 		<section className='navbarContainer'>
 			<nav className='navbar'>
 				<div className='navbar__logo'>
-					<NavLink
-						activeStyle={{
-							fontWeight: 'bold',
-							color: 'blue',
-						}}
-						onClick={() => setSearchValue('')}
-						to='/'
-					>
+					<NavLink onClick={() => setSearchValue('')} to='/'>
 						<img src={Logo} alt='' />
 					</NavLink>
 				</div>
