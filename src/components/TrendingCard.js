@@ -3,6 +3,7 @@ import MovieIcon from './assets/icon-category-movie.svg'
 import TvIcon from './assets/icon-category-tv.svg'
 import bookmarkEmpty from './assets/icon-bookmark-empty.svg'
 import bookmarkFull from './assets/icon-bookmark-full.svg'
+import playIcon from './assets/icon-play.svg'
 
 import { showsContext } from '../contexts/showsContext'
 
@@ -30,6 +31,17 @@ const TrendingCard = ({
 					src={require('' + imgSrc)}
 					alt=''
 				/>
+
+				<div className='card__imgContainer__play'>
+					<div>
+						<img
+							src={playIcon}
+							alt=''
+							className='card__imgContainer__play__img'
+						/>
+						<p className='card__imgContainer__play__text'>Play</p>
+					</div>
+				</div>
 			</div>
 
 			<div

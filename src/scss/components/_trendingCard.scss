@@ -3,6 +3,7 @@
 
 	&__imgContainer {
 		z-index: -1;
+		cursor: pointer;
 
 		&__image {
 			inline-size: 100%;
@@ -11,6 +12,7 @@
 	}
 
 	&__bookmark {
+		z-index: 99;
 		position: absolute;
 		top: 8%;
 		right: 6%;
@@ -32,6 +34,7 @@
 	}
 
 	&__info {
+		z-index: 99;
 		position: absolute;
 		bottom: 10%;
 		left: 5%;

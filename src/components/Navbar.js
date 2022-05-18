@@ -6,40 +6,50 @@ import TVseriesIcon from './assets/icon-nav-tv-series.svg'
 import BookmarksIcon from './assets/icon-nav-bookmark.svg'
 import UserIcon from './assets/image-avatar.png'
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
+import { useLocation } from 'react-router-dom'
 
 import { showsContext } from '../contexts/showsContext'
 
 const Navbar = () => {
+	const location = useLocation()
+
+	//destructuring pathname from location
+	const { pathname } = location
+
+	//Javascript split method to get the name of the path in array
+	const splitLocation = pathname.split('/')
+
 	const { setSearchValue } = useContext(showsContext)
 	return (
 		<section className='navbarContainer'>
 			<nav className='navbar'>
 				<div className='navbar__logo'>
-					<Link to='/'>
+					<NavLink onClick={() => setSearchValue('')} to='/'>
 						<img src={Logo} alt='' />
-					</Link>
+					</NavLink>
 				</div>
 				<ul className='navbar__links'>
 					<li className='navbar__links__link'>
-						<Link onClick={() => setSearchValue('')} to='/'>
+						<NavLink onClick={() => setSearchValue('')} to='/'>
 							<img className='listIcon' src={HomeIcon} alt='' />
-						</Link>
+						</NavLink>
 					</li>
 					<li className='navbar__links__link'>
-						<Link onClick={() => setSearchValue('')} to='/movies'>
+						<NavLink onClick={() => setSearchValue('')} to='/movies'>
 							<img className='listIcon' src={MoviesIcon} alt='' />
-						</Link>
+						</NavLink>
 					</li>
 					<li className='navbar__links__link'>
-						<Link onClick={() => setSearchValue('')} to='/tvseries'>
+						<NavLink onClick={() => setSearchValue('')} to='/tvseries'>
 							<img className='listIcon' src={TVseriesIcon} alt='' />
-						</Link>
+						</NavLink>
 					</li>
 					<li className='navbar__links__link'>
-						<Link onClick={() => setSearchValue('')} to='/bookmarks'>
+						<NavLink onClick={() => setSearchValue('')} to='/bookmarks'>
 							<img className='listIcon' src={BookmarksIcon} alt='' />
-						</Link>
+						</NavLink>
 					</li>
 				</ul>
 
