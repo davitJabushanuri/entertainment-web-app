@@ -71,13 +71,7 @@
 	}
 }
 
-.listIcon {
-	fill: $clr-primary;
-	stroke: rgb(24, 201, 201);
-	fill: aquamarine;
-	opacity: 1;
-
-	> svg {
-		fill: orange;
-	}
+.selected {
+	color: aqua;
+	text-decoration: none;
 }

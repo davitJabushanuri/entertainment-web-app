@@ -23,11 +23,11 @@
 		font-size: $fs-base;
 		width: calc(100% - 24px - 1rem);
 		padding: 0.8rem 0;
-		border-bottom: 1px solid transparent;
+		border-bottom: 3px solid transparent;
 		caret-color: $clr-primary;
 
 		&:focus {
-			border-bottom: 1px solid $clr-secondary;
+			border-bottom: 3px solid $clr-background-nav;
 		}
 
 		@media (min-width: 768px) {

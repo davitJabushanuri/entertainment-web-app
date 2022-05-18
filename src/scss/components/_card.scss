@@ -29,7 +29,8 @@
 			}
 
 			div {
-				padding: 0.4rem 0.6rem;
+				padding: 0.3rem 0.3rem;
+				padding-right: 1.2rem;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -39,6 +40,7 @@
 
 				p {
 					margin: 0;
+					padding: 0;
 				}
 
 				@media (max-width: 768px) {
@@ -46,7 +48,7 @@
 					gap: 0.4rem;
 
 					img {
-						width: 18px;
+						width: 16px;
 					}
 				}
 			}
@@ -60,8 +62,8 @@
 		right: 8%;
 		background-color: $clr-secondary;
 		border-radius: 50%;
-		width: clamp(32px, 32px + 1vw, 36px);
-		height: clamp(32px, 32px + 1vw, 36px);
+		width: 32px;
+		height: 32px;
 		display: flex;
 		justify-content: center;
 		align-items: center;

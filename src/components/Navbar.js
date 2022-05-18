@@ -26,28 +26,79 @@ const Navbar = () => {
 		<section className='navbarContainer'>
 			<nav className='navbar'>
 				<div className='navbar__logo'>
-					<NavLink onClick={() => setSearchValue('')} to='/'>
+					<NavLink
+						activeStyle={{
+							fontWeight: 'bold',
+							color: 'blue',
+						}}
+						onClick={() => setSearchValue('')}
+						to='/'
+					>
 						<img src={Logo} alt='' />
 					</NavLink>
 				</div>
 				<ul className='navbar__links'>
 					<li className='navbar__links__link'>
-						<NavLink onClick={() => setSearchValue('')} to='/'>
+						<NavLink
+							style={({ isActive }) =>
+								isActive
+									? {
+											filter:
+												'invert(99%) sepia(91%) saturate(2%) hue-rotate(167deg) brightness(152%) contrast(100%)',
+									  }
+									: {}
+							}
+							onClick={() => setSearchValue('')}
+							to='/'
+						>
 							<img className='listIcon' src={HomeIcon} alt='' />
 						</NavLink>
 					</li>
 					<li className='navbar__links__link'>
-						<NavLink onClick={() => setSearchValue('')} to='/movies'>
+						<NavLink
+							style={({ isActive }) =>
+								isActive
+									? {
+											filter:
+												'invert(99%) sepia(91%) saturate(2%) hue-rotate(167deg) brightness(152%) contrast(100%)',
+									  }
+									: {}
+							}
+							onClick={() => setSearchValue('')}
+							to='/movies'
+						>
 							<img className='listIcon' src={MoviesIcon} alt='' />
 						</NavLink>
 					</li>
 					<li className='navbar__links__link'>
-						<NavLink onClick={() => setSearchValue('')} to='/tvseries'>
+						<NavLink
+							style={({ isActive }) =>
+								isActive
+									? {
+											filter:
+												'invert(99%) sepia(91%) saturate(2%) hue-rotate(167deg) brightness(152%) contrast(100%)',
+									  }
+									: {}
+							}
+							onClick={() => setSearchValue('')}
+							to='/tvseries'
+						>
 							<img className='listIcon' src={TVseriesIcon} alt='' />
 						</NavLink>
 					</li>
 					<li className='navbar__links__link'>
-						<NavLink onClick={() => setSearchValue('')} to='/bookmarks'>
+						<NavLink
+							style={({ isActive }) =>
+								isActive
+									? {
+											filter:
+												'invert(99%) sepia(91%) saturate(2%) hue-rotate(167deg) brightness(152%) contrast(100%)',
+									  }
+									: {}
+							}
+							onClick={() => setSearchValue('')}
+							to='/bookmarks'
+						>
 							<img className='listIcon' src={BookmarksIcon} alt='' />
 						</NavLink>
 					</li>
