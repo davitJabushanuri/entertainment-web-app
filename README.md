@@ -112,7 +112,7 @@ To filter to a specific color, use the following [Codepen](https://codepen.io/so
 
 - How to style active Link in react-router
 
-  - Use NavLink instead Link.
+  - Use NavLink instead of Link.
   - pass link’s active state as a parameter
 
   ```
